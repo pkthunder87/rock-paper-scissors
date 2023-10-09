@@ -4,7 +4,7 @@ import Rules from './components/Rules';
 
 function App() {
   return (
-    <div className="grid h-[100dvh] grid-rows-[23%_49%_28%] p-10">
+    <div className="grid h-[100dvh] grid-rows-[30%_40%_30%] p-10">
       <Header />
       <Game />
       <Rules />

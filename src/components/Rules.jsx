@@ -1,5 +1,5 @@
 function Rules() {
-  return <div className="bg-red-500">Rules</div>;
+  return <div className="">Rules</div>;
 }
 
 export default Rules;
