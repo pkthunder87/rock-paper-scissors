@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Game from './components/Game';
 import Header from './components/Header';
 import Rules from './components/Rules';
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Game />
       <Rules />
+      <Footer />
     </div>
   );
 }
