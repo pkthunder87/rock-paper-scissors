@@ -3,8 +3,8 @@ import HandGesture from './HandGesture';
 function Game() {
   return (
     <div
-      className=" grid grid-cols-[50%_50%]
-    grid-rows-[33%_33%_33%]  bg-[url(bg-pentagon.svg)] bg-[length:70%] bg-center bg-no-repeat"
+      className=" row-span-1 grid
+    grid-cols-[50%_50%]  grid-rows-[33%_33%_33%] bg-[url(bg-pentagon.svg)] bg-[length:70%] bg-center bg-no-repeat"
     >
       <div className="col-span-2 -mt-4 justify-self-center">
         <HandGesture

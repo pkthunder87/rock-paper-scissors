@@ -1,7 +1,7 @@
 function HandGesture({ gesture, gesture_color_from, gesture_color_to }) {
   return (
     <>
-      <div
+      <button
         className={`${gesture_color_from} ${gesture_color_to} flex h-[8.5rem] w-[8.5rem] items-center 
         justify-center overflow-visible rounded-full bg-gradient-to-b shadow-[inset_0_-6px_2px_hsla(0,50%,10%,.5)] `}
       >
@@ -13,7 +13,7 @@ function HandGesture({ gesture, gesture_color_from, gesture_color_to }) {
             gesture[0].toUpperCase(),
           )}`}
         />
-      </div>
+      </button>
     </>
   );
 }
