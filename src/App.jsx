@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Modal from './components/Modal';
 import Rules from './components/Rules';
 import Start from './pages/Start';
+import Results from './pages/Results';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -15,9 +16,10 @@ function App() {
 
   return (
     <>
-      <div className="grid h-[100dvh] grid-rows-[30%_40%_30%] p-10">
+      <div className="grid h-[100dvh] grid-rows-[30%_40%_15%_15%] p-10">
         <Header />
-        <Start />
+        {/* <Start /> */}
+        <Results />
         <Rules onOpenModal={handleToggleModal} />
 
         <Footer />
