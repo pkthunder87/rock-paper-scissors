@@ -9,6 +9,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   function handleToggleModal(e) {
+    e.target.blur();
     setShowModal((currentShowModal) => !currentShowModal);
   }
 
@@ -17,11 +18,17 @@ function App() {
       <div className="grid h-[100dvh] grid-rows-[30%_40%_30%] p-10">
         <Header />
         <Start />
-        <Rules onHandleToggleModal={handleToggleModal} />
+        <Rules onOpenModal={handleToggleModal} />
 
         <Footer />
       </div>
-      {showModal && <Modal onHandleToggleModal={handleToggleModal} />}
+      {showModal && (
+        <Modal
+          onCloseModal={handleToggleModal}
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
+      )}
     </>
   );
 }
