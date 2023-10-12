@@ -1,4 +1,4 @@
-function Winner() {
+function WinnerTag() {
   // Adds translucent concentric circles to winner
 
   return (
@@ -14,4 +14,4 @@ function Winner() {
   );
 }
 
-export default Winner;
+export default WinnerTag;
