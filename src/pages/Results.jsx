@@ -1,11 +1,11 @@
 import ChosenGestures from '../components/ChosenGestures';
-import Winner from '../components/Winner';
+import PlayerWinLose from '../components/PlayerWinLose';
 
 function Results() {
   return (
     <div className="row-span-2 grid grid-rows-[60%_40%]">
       <ChosenGestures />
-      <Winner />
+      <PlayerWinLose />
     </div>
   );
 }
