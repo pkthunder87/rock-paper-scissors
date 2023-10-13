@@ -10,26 +10,72 @@ function ChosenGestures() {
   const [playerWon, setPlayerWon] = useState('TEST');
   const [showHousePick, setShowHousePick] = useState(false);
 
-  const [playerGesture, setPlayerGesture] = useState('rock');
+  const [playerGesture, setPlayerGesture] = useState('spock');
 
-  const [houseGesture, setHouseGesture] = useState(
-    () =>
-      availableGestures[Math.floor(Math.random() * availableGestures.length)],
+  const [houseGesture, setHouseGesture] = useState('scissors');
+
+  // const [houseGesture, setHouseGesture] = useState(
+  //   () =>
+  //     availableGestures[Math.floor(Math.random() * availableGestures.length)],
+  // );
+
+  useEffect(
+    function gameLogic() {
+      if (playerGesture === 'rock') {
+        if (houseGesture === 'rock') setPlayerWon('tie');
+        if (houseGesture === 'scissors') setPlayerWon('win');
+        if (houseGesture === 'lizard') setPlayerWon('win');
+        if (houseGesture === 'paper') setPlayerWon('lose');
+        if (houseGesture === 'spock') setPlayerWon('lose');
+      }
+
+      if (playerGesture === 'paper') {
+        if (houseGesture === 'paper') setPlayerWon('tie');
+        if (houseGesture === 'scissors') setPlayerWon('lose');
+        if (houseGesture === 'lizard') setPlayerWon('lose');
+        if (houseGesture === 'rock') setPlayerWon('win');
+        if (houseGesture === 'spock') setPlayerWon('win');
+      }
+
+      if (playerGesture === 'scissors') {
+        if (houseGesture === 'scissors') setPlayerWon('tie');
+        if (houseGesture === 'paper') setPlayerWon('win');
+        if (houseGesture === 'lizard') setPlayerWon('win');
+        if (houseGesture === 'rock') setPlayerWon('lose');
+        if (houseGesture === 'spock') setPlayerWon('lose');
+      }
+
+      if (playerGesture === 'lizard') {
+        if (houseGesture === 'lizard') setPlayerWon('tie');
+        if (houseGesture === 'scissors') setPlayerWon('lose');
+        if (houseGesture === 'rock') setPlayerWon('lose');
+        if (houseGesture === 'paper') setPlayerWon('win');
+        if (houseGesture === 'spock') setPlayerWon('win');
+      }
+
+      if (playerGesture === 'spock') {
+        if (houseGesture === 'spock') setPlayerWon('tie');
+        if (houseGesture === 'paper') setPlayerWon('lose');
+        if (houseGesture === 'lizard') setPlayerWon('lose');
+        if (houseGesture === 'rock') setPlayerWon('win');
+        if (houseGesture === 'scissors') setPlayerWon('win');
+      }
+
+      console.log(playerGesture, houseGesture);
+      console.log(playerWon);
+    },
+    [playerWon, houseGesture, playerGesture],
   );
-
-  useEffect(function () {
-    console.log(playerGesture === 'rock');
-  }, []);
 
   useEffect(
     function () {
       setPlayerGesture;
-      function gameLogic() {
+      function housePick() {
         setShowHousePick(true);
         setWinner('player');
       }
       function timeout() {
-        setTimeout(gameLogic, 1200);
+        setTimeout(housePick, 1200);
       }
       timeout();
 
@@ -48,8 +94,8 @@ function ChosenGestures() {
           <HandGesture
             winner={winner === 'player'}
             gesture={playerGesture}
-            gesture_color_from="from-lizard-from"
-            gesture_color_to="to-lizard-to"
+            gesture_color_from={`from-${playerGesture}-from`}
+            gesture_color_to={`to-${playerGesture}-to`}
           >
             <WinnerTag />
           </HandGesture>
@@ -65,8 +111,8 @@ function ChosenGestures() {
             <HandGesture
               winner={winner === 'house'}
               gesture={houseGesture}
-              gesture_color_from="from-spock-from"
-              gesture_color_to="to-spock-to"
+              gesture_color_from={`from-${houseGesture}-from`}
+              gesture_color_to={`to-${houseGesture}-to`}
             >
               <WinnerTag />
             </HandGesture>
