@@ -1,23 +1,21 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Circle from './Circle';
 import HandGesture from './HandGesture';
 import WinnerTag from './Winner';
 
 const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-function ChosenGestures() {
+function ChosenGestures({ setIsLoading, playerWon, setPlayerWon }) {
   const [winner, setWinner] = useState('');
-  const [playerWon, setPlayerWon] = useState('TEST');
+
   const [showHousePick, setShowHousePick] = useState(false);
 
-  const [playerGesture, setPlayerGesture] = useState('spock');
+  const [playerGesture] = useState('spock');
 
-  const [houseGesture, setHouseGesture] = useState('scissors');
-
-  // const [houseGesture, setHouseGesture] = useState(
-  //   () =>
-  //     availableGestures[Math.floor(Math.random() * availableGestures.length)],
-  // );
+  const [houseGesture] = useState(
+    () =>
+      availableGestures[Math.floor(Math.random() * availableGestures.length)],
+  );
 
   useEffect(
     function gameLogic() {
@@ -69,10 +67,10 @@ function ChosenGestures() {
 
   useEffect(
     function () {
-      setPlayerGesture;
       function housePick() {
         setShowHousePick(true);
         setWinner('player');
+        setIsLoading(false);
       }
       function timeout() {
         setTimeout(housePick, 1200);
@@ -81,10 +79,11 @@ function ChosenGestures() {
 
       return () => {
         clearTimeout(timeout);
+        setIsLoading(true);
       };
     },
 
-    [setShowHousePick, setWinner, houseGesture, playerGesture],
+    [setShowHousePick, setWinner, houseGesture, playerGesture, setIsLoading],
   );
 
   return (
@@ -96,6 +95,7 @@ function ChosenGestures() {
             gesture={playerGesture}
             gesture_color_from={`from-${playerGesture}-from`}
             gesture_color_to={`to-${playerGesture}-to`}
+            disable={true}
           >
             <WinnerTag />
           </HandGesture>
@@ -113,6 +113,7 @@ function ChosenGestures() {
               gesture={houseGesture}
               gesture_color_from={`from-${houseGesture}-from`}
               gesture_color_to={`to-${houseGesture}-to`}
+              disable={true}
             >
               <WinnerTag />
             </HandGesture>
