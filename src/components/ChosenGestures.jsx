@@ -3,27 +3,42 @@ import Circle from './Circle';
 import HandGesture from './HandGesture';
 import WinnerTag from './Winner';
 
+const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
 function ChosenGestures() {
   const [winner, setWinner] = useState('');
+  const [playerWon, setPlayerWon] = useState('TEST');
   const [showHousePick, setShowHousePick] = useState(false);
-  const houseGesture = useRef('');
-  const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
+  const [playerGesture, setPlayerGesture] = useState('rock');
+
+  const [houseGesture, setHouseGesture] = useState(
+    () =>
+      availableGestures[Math.floor(Math.random() * availableGestures.length)],
+  );
+
+  useEffect(function () {
+    console.log(playerGesture === 'rock');
+  }, []);
 
   useEffect(
     function () {
+      setPlayerGesture;
       function gameLogic() {
         setShowHousePick(true);
-        setWinner('house');
+        setWinner('player');
       }
       function timeout() {
         setTimeout(gameLogic, 1200);
       }
       timeout();
 
-      return clearTimeout(timeout);
+      return () => {
+        clearTimeout(timeout);
+      };
     },
 
-    [setShowHousePick],
+    [setShowHousePick, setWinner, houseGesture, playerGesture],
   );
 
   return (
@@ -32,7 +47,7 @@ function ChosenGestures() {
         <div>
           <HandGesture
             winner={winner === 'player'}
-            gesture="lizard"
+            gesture={playerGesture}
             gesture_color_from="from-lizard-from"
             gesture_color_to="to-lizard-to"
           >
@@ -49,7 +64,7 @@ function ChosenGestures() {
           <div>
             <HandGesture
               winner={winner === 'house'}
-              gesture="spock"
+              gesture={houseGesture}
               gesture_color_from="from-spock-from"
               gesture_color_to="to-spock-to"
             >
