@@ -21,12 +21,12 @@ function Modal({ onCloseModal, showModal, setShowModal }) {
       <h2 className="text-[2.5rem] tracking-wide text-dark-text">RULES</h2>
       <img
         className=" scale-125"
-        src="./image-rules-bonus.svg"
+        src="../image-rules-bonus.svg"
         alt="Rules Diagram"
       />
       <div className="mb-12 self-end">
         <button onClick={onCloseModal}>
-          <img className="h-10 w-10" src="./icon-close.svg" alt="X Mark" />
+          <img className="h-10 w-10" src="../icon-close.svg" alt="X Mark" />
         </button>
       </div>
     </div>
