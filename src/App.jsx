@@ -7,15 +7,12 @@ import Start from './pages/Start';
 import Results from './pages/Results';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PageNotFound from './pages/PageNotFound';
+import { useGameState } from './context/gameStateContext';
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
   const [playerScore, setPlayerScore] = useState(0);
 
-  function handleToggleModal(e) {
-    e.target.blur();
-    setShowModal((currentShowModal) => !currentShowModal);
-  }
+  const { showModal } = useGameState();
 
   return (
     <>
@@ -37,17 +34,11 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
-        <Rules onOpenModal={handleToggleModal} />
+        <Rules />
 
         <Footer />
       </div>
-      {showModal && (
-        <Modal
-          onCloseModal={handleToggleModal}
-          showModal={showModal}
-          setShowModal={setShowModal}
-        />
-      )}
+      {showModal && <Modal />}
     </>
   );
 }

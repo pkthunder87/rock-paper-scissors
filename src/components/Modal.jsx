@@ -1,6 +1,13 @@
 import { useEffect } from 'react';
+import { useGameState } from '../context/gameStateContext';
 
-function Modal({ onCloseModal, showModal, setShowModal }) {
+function Modal() {
+  const {
+    showModal,
+    setShowModal,
+    onToggleModal: onCloseModal,
+  } = useGameState();
+
   useEffect(
     function escapePressed(e) {
       if (showModal && e?.code === 'Escape') {

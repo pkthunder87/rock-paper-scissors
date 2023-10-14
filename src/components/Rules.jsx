@@ -1,4 +1,8 @@
-function Rules({ onOpenModal }) {
+import { useGameState } from '../context/gameStateContext';
+
+function Rules() {
+  const { onToggleModal: onOpenModal } = useGameState();
+
   return (
     <div className="mb-10 flex items-end justify-center">
       <button
