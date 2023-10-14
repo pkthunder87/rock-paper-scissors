@@ -1,6 +1,6 @@
 import ScoreBox from './ScoreBox';
 
-function Header({ playerScore }) {
+function Header() {
   return (
     <div className="flex h-[12.5dvh] w-[84dvw] items-center justify-between rounded-lg border-4 border-header-outline p-2">
       <img
@@ -8,7 +8,7 @@ function Header({ playerScore }) {
         src="../logo-bonus.svg"
         alt="Words aligned vertically: Rock, Paper, Scissors, Lizard, Spock"
       />
-      <ScoreBox playerScore={playerScore} />
+      <ScoreBox />
     </div>
   );
 }

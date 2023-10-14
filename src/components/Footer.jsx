@@ -7,6 +7,7 @@ function Footer() {
           className="text-blue-300"
           href="https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH"
           target="_blank"
+          rel="noreferrer"
         >
           Frontend Mentor
         </a>
@@ -15,6 +16,7 @@ function Footer() {
           className="text-blue-300"
           href="https://github.com/pkthunder87/rock-paper-scissors"
           target="_blank"
+          rel="noreferrer"
         >
           PKThunder87
         </a>

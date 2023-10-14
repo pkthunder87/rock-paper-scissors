@@ -1,21 +1,22 @@
-import { useState } from 'react';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Modal from './components/Modal';
-import Rules from './components/Rules';
-import Start from './pages/Start';
-import Results from './pages/Results';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PageNotFound from './pages/PageNotFound';
+
 import { useGameState } from './context/gameStateContext';
 
+import Header from './components/Header';
+import Start from './pages/Start';
+import Results from './pages/Results';
+import Rules from './components/Rules';
+import PageNotFound from './pages/PageNotFound';
+import Footer from './components/Footer';
+import Modal from './components/Modal';
+
 function App() {
-  const { playerScore, setPlayerScore, showModal } = useGameState();
+  const { showModal } = useGameState();
 
   return (
     <>
       <div className="grid h-[100dvh] grid-rows-[30%_40%_15%_15%] p-10">
-        <Header playerScore={playerScore} />
+        <Header />
         <BrowserRouter>
           <Routes>
             <Route index element={<Start />} />

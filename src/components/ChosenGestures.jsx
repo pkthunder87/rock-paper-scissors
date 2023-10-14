@@ -88,11 +88,8 @@ function ChosenGestures() {
           setPlayerWon('win');
         }
       }
-
-      console.log(playerGesture, houseGesture);
-      console.log(playerWon);
     },
-    [playerWon, houseGesture, playerGesture, setPlayerWon, setPlayerScore],
+    [playerWon, houseGesture, playerGesture, setPlayerWon],
   );
 
   useEffect(

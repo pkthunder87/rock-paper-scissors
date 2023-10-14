@@ -1,6 +1,7 @@
+import { useGameState } from '../context/gameStateContext';
+
 import ChosenGestures from '../components/ChosenGestures';
 import PlayerWinLose from '../components/PlayerWinLose';
-import { useGameState } from '../context/gameStateContext';
 
 function Results() {
   const { isLoading } = useGameState();

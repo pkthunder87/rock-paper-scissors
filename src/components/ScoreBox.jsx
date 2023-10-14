@@ -1,4 +1,8 @@
-function ScoreBox({ playerScore }) {
+import { useGameState } from '../context/gameStateContext';
+
+function ScoreBox() {
+  const { playerScore } = useGameState();
+
   return (
     <div className=" mr-2 flex h-[5.8rem] w-[5.8rem] flex-col items-center rounded-lg border-[3px] bg-white">
       <h2 className="-mb-3 pt-[.65rem] text-sm font-semibold tracking-widest text-score-text">
