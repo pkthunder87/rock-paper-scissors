@@ -9,7 +9,7 @@ function HandGesture({
   disable = false,
 }) {
   return (
-    <div className="relative">
+    <div className="relative h-[8.5rem] w-[8.5rem]">
       <Link to={`/results/${gesture}`}>
         <button
           className={`${gesture_color_from} ${gesture_color_to} relative flex h-[8.5rem] w-[8.5rem] items-center 
@@ -17,7 +17,7 @@ function HandGesture({
           disabled={disable}
         >
           <img
-            className="h-[6.5rem] w-[6.5rem] overflow-visible rounded-full bg-white p-6 shadow-[inset_0_5px_2px_hsla(0,50%,10%,.2)] "
+            className="h-[6.5rem] w-[6.5rem] overflow-visible rounded-full bg-white p-6 shadow-[inset_0_5px_2px_hsla(0,50%,10%,.2)] sm:bg-red-500 "
             src={`../icon-${gesture}.svg`}
             alt={`Hand Gesture: ${gesture.replace(
               gesture[0],

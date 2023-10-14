@@ -23,7 +23,7 @@ function Game() {
           />
         </div>
 
-        <div className="-mt-8 ml-[4.5rem]">
+        <div className="-mt-8 ml-[4.9rem]">
           <HandGesture
             gesture="paper"
             gesture_color_from="from-paper-from"

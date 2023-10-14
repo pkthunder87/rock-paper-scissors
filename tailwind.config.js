@@ -5,6 +5,12 @@ export default {
     fontFamily: {
       sans: 'Barlow Semi Condensed',
     },
+    screens: {
+      sm: '425px',
+      md: '640px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       colors: {
         'radial-from': 'hsl(214, 47%, 23%)',

@@ -27,7 +27,7 @@ function Modal() {
     <div className="absolute inset-0 grid h-[100dvh] w-[100dvw]  grid-rows-[30%_40%_30%] items-center justify-center bg-white p-10 text-center">
       <h2 className="text-[2.5rem] tracking-wide text-dark-text">RULES</h2>
       <img
-        className=" scale-125"
+        className=" scale-100"
         src="../image-rules-bonus.svg"
         alt="Rules Diagram"
       />
