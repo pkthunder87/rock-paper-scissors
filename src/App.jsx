@@ -10,9 +10,7 @@ import PageNotFound from './pages/PageNotFound';
 import { useGameState } from './context/gameStateContext';
 
 function App() {
-  const [playerScore, setPlayerScore] = useState(0);
-
-  const { showModal } = useGameState();
+  const { playerScore, setPlayerScore, showModal } = useGameState();
 
   return (
     <>
@@ -22,15 +20,7 @@ function App() {
           <Routes>
             <Route index element={<Start />} />
             <Route path="start" element={<Start />} />
-            <Route
-              path="results/:gesture"
-              element={
-                <Results
-                  playerScore={playerScore}
-                  setPlayerScore={setPlayerScore}
-                />
-              }
-            />
+            <Route path="results/:gesture" element={<Results />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>

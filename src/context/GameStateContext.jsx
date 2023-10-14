@@ -6,6 +6,9 @@ function GameStateProvider({ children }) {
   const [showModal, setShowModal] = useState(false);
   const [playerScore, setPlayerScore] = useState(0);
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [playerWon, setPlayerWon] = useState('');
+
   function handleToggleModal(e) {
     e.target.blur();
     setShowModal((currentShowModal) => !currentShowModal);
@@ -18,6 +21,10 @@ function GameStateProvider({ children }) {
         setShowModal,
         playerScore,
         setPlayerScore,
+        isLoading,
+        setIsLoading,
+        playerWon,
+        setPlayerWon,
         onToggleModal: handleToggleModal,
       }}
     >

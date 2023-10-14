@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useGameState } from '../context/gameStateContext';
 
-function PlayerWinLose({ playerWin = 'win' }) {
+function PlayerWinLose() {
+  const { playerWon: playerWin } = useGameState();
+
   return (
     <div className="-mt-3 flex flex-col items-center justify-start">
       <h2 className="text-[5rem] tracking-wide text-white">

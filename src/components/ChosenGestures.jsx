@@ -3,15 +3,14 @@ import Circle from './Circle';
 import HandGesture from './HandGesture';
 import WinnerTag from './Winner';
 import { useParams } from 'react-router-dom';
+import { useGameState } from '../context/gameStateContext';
 
 const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-function ChosenGestures({
-  setIsLoading,
-  playerWon,
-  setPlayerWon,
-  setPlayerScore,
-}) {
+function ChosenGestures() {
+  const { setIsLoading, playerWon, setPlayerWon, setPlayerScore } =
+    useGameState();
+
   const [showHousePick, setShowHousePick] = useState(false);
   const [playerWonDelay, setPlayerWonDelay] = useState(false);
 
@@ -110,6 +109,7 @@ function ChosenGestures({
       return () => {
         clearTimeout(timeout);
         setIsLoading(true);
+        setPlayerWon('lose');
       };
     },
 
