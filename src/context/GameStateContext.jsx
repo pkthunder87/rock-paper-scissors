@@ -9,6 +9,9 @@ function GameStateProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [playerWon, setPlayerWon] = useState('');
 
+  const [showHousePick, setShowHousePick] = useState(false);
+  const [playerWonDelay, setPlayerWonDelay] = useState(false);
+
   function handleToggleModal(e) {
     e.target.blur();
     setShowModal((currentShowModal) => !currentShowModal);
@@ -25,6 +28,10 @@ function GameStateProvider({ children }) {
         setIsLoading,
         playerWon,
         setPlayerWon,
+        showHousePick,
+        setShowHousePick,
+        playerWonDelay,
+        setPlayerWonDelay,
         onToggleModal: handleToggleModal,
       }}
     >

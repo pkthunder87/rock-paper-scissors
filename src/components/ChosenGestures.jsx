@@ -8,11 +8,16 @@ import { useGameState } from '../context/gameStateContext';
 const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 function ChosenGestures() {
-  const { setIsLoading, playerWon, setPlayerWon, setPlayerScore } =
-    useGameState();
-
-  const [showHousePick, setShowHousePick] = useState(false);
-  const [playerWonDelay, setPlayerWonDelay] = useState(false);
+  const {
+    setIsLoading,
+    playerWon,
+    setPlayerWon,
+    setPlayerScore,
+    showHousePick,
+    setShowHousePick,
+    playerWonDelay,
+    setPlayerWonDelay,
+  } = useGameState();
 
   const { gesture } = useParams();
   const [playerGesture] = useState(gesture);
@@ -110,6 +115,8 @@ function ChosenGestures() {
         clearTimeout(timeout);
         setIsLoading(true);
         setPlayerWon('lose');
+        setShowHousePick(false);
+        setPlayerWonDelay(false);
       };
     },
 
@@ -120,6 +127,8 @@ function ChosenGestures() {
       setIsLoading,
       playerWon,
       setPlayerScore,
+      setPlayerWon,
+      setPlayerWonDelay,
     ],
   );
 
