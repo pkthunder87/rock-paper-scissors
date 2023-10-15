@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-size: 70%;
+    @apply text-[70%] sm:text-[75%];
   }
 
   body {

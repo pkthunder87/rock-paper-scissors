@@ -5,9 +5,9 @@ function Game() {
     <>
       <div
         className=" row-span-1 grid
-    grid-cols-[50%_50%]  grid-rows-[33%_33%_33%] bg-[url(../bg-pentagon.svg)] bg-[length:70%] bg-center bg-no-repeat"
+    grid-cols-[minmax(150px,190px)_minmax(150px,190px)] grid-rows-[33%_33%_33%] items-center justify-center bg-[url(../bg-pentagon.svg)] bg-[length:249px] bg-center bg-no-repeat "
       >
-        <div className="col-span-2 -mt-4 justify-self-center">
+        <div className="col-span-2 -mt-12 justify-self-center ">
           <HandGesture
             gesture="scissors"
             gesture_color_from="from-scissors-from"
@@ -15,7 +15,7 @@ function Game() {
           />
         </div>
 
-        <div className="-mt-8 ml-2">
+        <div className="-mt-14 mr-24 justify-self-end">
           <HandGesture
             gesture="spock"
             gesture_color_from="from-spock-from"
@@ -23,7 +23,7 @@ function Game() {
           />
         </div>
 
-        <div className="-mt-8 ml-[4.9rem]">
+        <div className="-mt-14 ml-24 justify-self-start">
           <HandGesture
             gesture="paper"
             gesture_color_from="from-paper-from"
@@ -31,7 +31,7 @@ function Game() {
           />
         </div>
 
-        <div className="ml-12 mt-2">
+        <div className=" mr-8 mt-8 justify-self-end">
           <HandGesture
             gesture="lizard"
             gesture_color_from="from-lizard-from"
@@ -39,7 +39,7 @@ function Game() {
           />
         </div>
 
-        <div className="ml-8 mt-2">
+        <div className="ml-8 mt-8 justify-self-start">
           <HandGesture
             gesture="rock"
             gesture_color_from="from-rock-from"
