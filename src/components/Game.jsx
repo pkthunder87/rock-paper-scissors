@@ -20,7 +20,8 @@ function Game() {
           <HandGesture
             gesture="spock"
             bg_image="bg-[url('../icon-spock.svg')]"
-            bg_scale="bg-[length:43%] bg-[60%_50%]"
+            bg_scale="bg-[length:43%]"
+            bg_pos="bg-[60%_50%]"
             gesture_color_from="from-spock-from"
             gesture_color_to="to-spock-to"
           />

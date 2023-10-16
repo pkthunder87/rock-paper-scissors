@@ -9,6 +9,7 @@ function HandGesture({
   disable = false,
   bg_image,
   bg_scale = 'bg-[length:50%]',
+  bg_pos = 'bg-center',
 }) {
   return (
     <div className="relative h-[8.5rem] w-[8.5rem]">
@@ -19,7 +20,7 @@ function HandGesture({
           disabled={disable}
         >
           <div
-            className={`shadow-[inset_0_5px_2px_hsla(0,50%,10%,.2)] ${bg_image} ${bg_scale} h-[6.5rem] w-[6.5rem]  rounded-full bg-white  bg-center bg-no-repeat p-6 `}
+            className={`shadow-[inset_0_5px_2px_hsla(0,50%,10%,.2)] ${bg_image} ${bg_scale} ${bg_pos} h-[6.5rem] w-[6.5rem]  rounded-full bg-white  bg-center bg-no-repeat p-6 `}
           ></div>
           <div>{winner && children}</div>
         </button>

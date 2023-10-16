@@ -129,6 +129,29 @@ function ChosenGestures() {
     ],
   );
 
+  const bg_scale_player =
+    playerGesture === 'spock'
+      ? 'bg-[length:43%]'
+      : playerGesture === 'lizard'
+      ? 'bg-[length:55%]'
+      : playerGesture === 'paper'
+      ? 'bg-[length:47%]'
+      : 'bg-[length:50%]';
+
+  const bg_scale_house =
+    houseGesture === 'spock'
+      ? 'bg-[length:43%]'
+      : houseGesture === 'lizard'
+      ? 'bg-[length:55%]'
+      : houseGesture === 'paper'
+      ? 'bg-[length:47%]'
+      : 'bg-[length:50%]';
+
+  const bg_pos_player =
+    playerGesture === 'spock' ? 'bg-[60%_50%]' : 'bg-center';
+
+  const bg_pos_house = houseGesture === 'spock' ? 'bg-[60%_50%]' : 'bg-center';
+
   return (
     <div className="grid grid-cols-2">
       <div className="-mt-4 ml-6">
@@ -140,11 +163,8 @@ function ChosenGestures() {
             gesture_color_to={`to-${playerGesture}-to`}
             disable={true}
             bg_image={`bg-[url('../icon-${playerGesture}.svg')]`}
-            bg_scale={`${
-              playerGesture === 'spock'
-                ? 'bg-[length:48%] bg-[60%_50%]'
-                : 'bg-[length:55%] bg-center'
-            }`}
+            bg_scale={bg_scale_player}
+            bg_pos={bg_pos_player}
           >
             <WinnerTag />
           </HandGesture>
@@ -164,11 +184,8 @@ function ChosenGestures() {
               gesture_color_to={`to-${houseGesture}-to`}
               disable={true}
               bg_image={`bg-[url('../icon-${houseGesture}.svg')]`}
-              bg_scale={`${
-                houseGesture === 'spock'
-                  ? 'bg-[length:48%] bg-[60%_50%]'
-                  : 'bg-[length:55%] bg-center'
-              }`}
+              bg_scale={bg_scale_house}
+              bg_pos={bg_pos_house}
             >
               <WinnerTag />
             </HandGesture>
