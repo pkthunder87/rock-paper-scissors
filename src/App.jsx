@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className="grid h-[100dvh] grid-rows-[30%_40%_15%_15%] p-10">
+      <div className="grid h-[100dvh] grid-rows-[30%_40%_15%_15%] justify-center p-10">
         <Header />
         <BrowserRouter>
           <Routes>
