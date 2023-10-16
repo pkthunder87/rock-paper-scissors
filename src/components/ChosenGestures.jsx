@@ -139,6 +139,12 @@ function ChosenGestures() {
             gesture_color_from={`from-${playerGesture}-from`}
             gesture_color_to={`to-${playerGesture}-to`}
             disable={true}
+            bg_image={`bg-[url('../icon-${playerGesture}.svg')]`}
+            bg_scale={`${
+              playerGesture === 'spock'
+                ? 'bg-[length:48%] bg-[60%_50%]'
+                : 'bg-[length:55%] bg-center'
+            }`}
           >
             <WinnerTag />
           </HandGesture>
@@ -157,6 +163,12 @@ function ChosenGestures() {
               gesture_color_from={`from-${houseGesture}-from`}
               gesture_color_to={`to-${houseGesture}-to`}
               disable={true}
+              bg_image={`bg-[url('../icon-${houseGesture}.svg')]`}
+              bg_scale={`${
+                houseGesture === 'spock'
+                  ? 'bg-[length:48%] bg-[60%_50%]'
+                  : 'bg-[length:55%] bg-center'
+              }`}
             >
               <WinnerTag />
             </HandGesture>
