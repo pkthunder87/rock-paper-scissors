@@ -5,7 +5,7 @@ function Game() {
     <>
       <div
         className=" row-span-1 grid
-    grid-cols-[minmax(150px,190px)_minmax(150px,190px)] grid-rows-[33%_33%_33%] items-center justify-center bg-[url(../bg-pentagon.svg)] bg-[length:249px] bg-center bg-no-repeat "
+    grid-cols-[minmax(150px,190px)_minmax(150px,190px)] grid-rows-[33%_33%_33%] items-center justify-center bg-[url(../bg-pentagon.svg)] bg-[length:249px] bg-center  bg-no-repeat sm:grid-rows-[20%_50%_33%] sm:bg-[length:400px]"
       >
         <div className="col-span-2 -mt-12 justify-self-center ">
           <HandGesture

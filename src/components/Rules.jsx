@@ -4,7 +4,7 @@ function Rules() {
   const { onToggleModal: onOpenModal } = useGameState();
 
   return (
-    <div className="mb-10 flex items-end justify-center">
+    <div className="mb-10 flex items-end justify-center sm:absolute sm:bottom-0 sm:right-8">
       <button
         onClick={onOpenModal}
         className="flex h-[56px] w-[150px] items-center justify-center rounded-lg border-4 border-header-outline p-2 text-2xl tracking-widest text-[#eee]"
