@@ -7,7 +7,7 @@ function Results() {
   const { isLoading } = useGameState();
 
   return (
-    <div className="row-span-2 grid grid-rows-[54%_46%]">
+    <div className="row-span-2 grid grid-rows-[58%_42%] ">
       <ChosenGestures />
       {!isLoading && <PlayerWinLose />}
     </div>

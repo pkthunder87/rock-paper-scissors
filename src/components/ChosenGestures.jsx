@@ -153,7 +153,7 @@ function ChosenGestures() {
   const bg_pos_house = houseGesture === 'spock' ? 'bg-[60%_50%]' : 'bg-center';
 
   return (
-    <div className="grid grid-cols-2">
+    <div className=" grid grid-cols-2 self-center">
       <div className="-mt-4 ml-6">
         <div>
           <HandGesture

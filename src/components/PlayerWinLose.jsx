@@ -5,7 +5,7 @@ function PlayerWinLose() {
   const { playerWon: playerWin } = useGameState();
 
   return (
-    <div className="-mt-3 flex flex-col items-center justify-start">
+    <div className=" -mt-4 flex flex-col items-center">
       <h2 className="text-[5rem] tracking-wide text-white">
         {playerWin === 'win'
           ? 'YOU WIN'
