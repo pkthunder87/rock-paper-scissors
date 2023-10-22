@@ -4,7 +4,7 @@ const GameStateContext = createContext();
 
 function GameStateProvider({ children }) {
   const [showModal, setShowModal] = useState(false);
-  const [playerScore, setPlayerScore] = useState(12);
+  const [playerScore, setPlayerScore] = useState(0);
 
   const [isLoading, setIsLoading] = useState(true);
   const [playerWon, setPlayerWon] = useState('');

@@ -5,9 +5,9 @@ function Game() {
     <>
       <div
         className=" row-span-1 mt-12 grid
-    grid-cols-[minmax(150px,190px)_minmax(150px,190px)] grid-rows-[33%_33%_33%] items-center justify-center bg-[url(../bg-pentagon.svg)] bg-[length:249px] bg-center  bg-no-repeat sm:grid-rows-[20%_50%_33%] sm:bg-[length:400px] md:mt-20"
+    grid-cols-[minmax(150px,190px)_minmax(150px,190px)] grid-rows-[33%_33%_33%] items-center justify-center bg-[url(../bg-pentagon.svg)] bg-[length:249px] bg-center  bg-no-repeat xl:mt-20 xl:grid-rows-[20%_50%_33%] xl:bg-[length:326px_300px]"
       >
-        <div className="col-span-2 mt-14 justify-self-center ">
+        <div className="col-span-2 mt-14 justify-self-center xl:mt-28 ">
           <HandGesture
             gesture="scissors"
             bg_image="bg-[url('../icon-scissors.svg')]"
@@ -16,7 +16,7 @@ function Game() {
           />
         </div>
 
-        <div className="-mt-7 mr-24 justify-self-end">
+        <div className="-mt-7 mr-24 justify-self-end xl:mr-[7.5rem]">
           <HandGesture
             gesture="spock"
             bg_image="bg-[url('../icon-spock.svg')]"
@@ -27,7 +27,7 @@ function Game() {
           />
         </div>
 
-        <div className="-mt-7 ml-24 justify-self-start">
+        <div className="-mt-7 ml-24 justify-self-start xl:ml-[7.5rem]">
           <HandGesture
             gesture="paper"
             bg_image="bg-[url('../icon-paper.svg')]"
@@ -37,7 +37,7 @@ function Game() {
           />
         </div>
 
-        <div className=" mr-8 mt-3 justify-self-end">
+        <div className=" mr-8 mt-3 justify-self-end xl:-mt-24">
           <HandGesture
             gesture="lizard"
             bg_image="bg-[url('../icon-lizard.svg')]"
@@ -47,7 +47,7 @@ function Game() {
           />
         </div>
 
-        <div className="ml-8 mt-3 justify-self-start">
+        <div className="ml-8 mt-3 justify-self-start xl:-mt-24">
           <HandGesture
             gesture="rock"
             bg_image="bg-[url('../icon-rock.svg')]"
