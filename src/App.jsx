@@ -13,9 +13,13 @@ import Modal from './components/Modal';
 function App() {
   const { showModal } = useGameState();
 
+  const darken_background = showModal
+    ? 'grid-rows-[30%_40%_15%_15% grid h-[100dvh]  justify-center p-10 brightness-50 sm:grid-rows-[20%_80%]'
+    : 'grid-rows-[30%_40%_15%_15% grid h-[100dvh]  justify-center p-10 brightness-100 sm:grid-rows-[20%_80%]';
+
   return (
     <>
-      <div className="grid-rows-[30%_40%_15%_15% grid h-[100dvh]  justify-center p-10 sm:grid-rows-[20%_80%]">
+      <div className={darken_background}>
         <Header />
         <BrowserRouter>
           <Routes>
