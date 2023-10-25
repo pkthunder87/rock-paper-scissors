@@ -153,11 +153,11 @@ function ChosenGestures() {
   const bg_pos_house = houseGesture === 'spock' ? 'bg-[60%_50%]' : 'bg-center';
 
   return (
-    <div className=" grid grid-cols-2 self-center">
-      <div className="-mt-4 ml-6">
+    <div className=" grid grid-cols-2 self-center md:grid-cols-[50%_50%]">
+      <div className=" -mt-4 mr-4 justify-self-start md:grid">
         <div>
           <HandGesture
-            winner={playerWonDelay}
+            winner={playerWon === 'win'}
             gesture={playerGesture}
             gesture_color_from={`from-${playerGesture}-from`}
             gesture_color_to={`to-${playerGesture}-to`}
@@ -166,15 +166,16 @@ function ChosenGestures() {
             bg_scale={bg_scale_player}
             bg_pos={bg_pos_player}
           >
-            <WinnerTag />
+            {showHousePick ? <WinnerTag /> : null}
           </HandGesture>
         </div>
-        <p className="ml-[1.35rem] mt-6 text-xl tracking-wide text-white">
+
+        <p className=" mt-6  flex  justify-center text-xl tracking-wide text-white md:-order-1">
           You Picked
         </p>
       </div>
 
-      <div className=" -mt-4 mr-4 justify-self-end">
+      <div className=" -mt-4 mr-4 justify-self-end md:grid">
         {showHousePick ? (
           <div>
             <HandGesture
@@ -193,7 +194,7 @@ function ChosenGestures() {
         ) : (
           <Circle />
         )}
-        <p className=" mt-6  text-xl tracking-wide text-white">
+        <p className=" mt-6  flex justify-center text-xl tracking-wide text-white  md:-order-1">
           The House Picked
         </p>
       </div>
