@@ -15,7 +15,7 @@ function App() {
 
   const darken_background = showModal
     ? 'grid-rows-[30%_40%_15%_15% grid h-[100dvh]  justify-center p-10 brightness-50 sm:grid-rows-[20%_80%]'
-    : 'grid-rows-[30%_40%_15%_15% grid h-[100dvh]  justify-center p-10 brightness-100 md:grid-rows-[20%_80%]';
+    : 'grid-rows-[30%_40%_15%_15% grid h-[100dvh]  justify-center p-10 brightness-100 lg:grid-rows-[20%_80%]';
 
   return (
     <>

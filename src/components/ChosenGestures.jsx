@@ -158,11 +158,13 @@ function ChosenGestures() {
 
   const bg_pos_house = houseGesture === 'spock' ? 'bg-[60%_50%]' : 'bg-center';
 
-  const the_house_picked_text = showHousePick ? 'mt-6' : 'mt-12';
+  const the_house_picked_text = showHousePick
+    ? 'mt-6 lg:mb-[5rem] lg:mt-[16px]'
+    : 'mt-12 lg:mb-[5rem] lg:mt-[1.35rem] lg:mr-[3.3rem]';
 
   return (
-    <div className=" grid grid-cols-2 self-center md:grid-cols-[50%_50%] lg:text-[2rem] ">
-      <div className=" -mt-4 mr-4 justify-self-start md:grid">
+    <div className=" grid grid-cols-2 self-center lg:mt-10 lg:grid-cols-[50%_50%] lg:pl-6 lg:pr-6 lg:text-[2rem]">
+      <div className=" -mt-4 mr-4 justify-self-start lg:grid ">
         <div>
           <HandGesture
             winner={playerWon === 'win'}
@@ -182,12 +184,12 @@ function ChosenGestures() {
           </HandGesture>
         </div>
 
-        <p className=" mt-6  flex  justify-center text-[1.25em] tracking-wide text-white md:-order-1">
+        <p className=" mt-6  flex  justify-center text-[1.25em] tracking-widest text-white lg:-order-1 lg:mb-[5rem] lg:mt-[16px] lg:text-[1em]">
           YOU PICKED
         </p>
       </div>
 
-      <div className=" -mt-4 mr-4 justify-self-end md:grid">
+      <div className=" -mt-4 mr-4 justify-self-end lg:grid">
         {showHousePick ? (
           <div>
             <HandGesture
@@ -209,7 +211,7 @@ function ChosenGestures() {
           <Circle />
         )}
         <p
-          className={` mt-12  flex justify-center text-[1.25em] tracking-wide text-white  md:-order-1 ${the_house_picked_text}`}
+          className={` -ml-4 flex  text-[1.25em] tracking-widest text-white md:justify-center  lg:-order-1 lg:text-[1em] ${the_house_picked_text}`}
         >
           THE HOUSE PICKED
         </p>

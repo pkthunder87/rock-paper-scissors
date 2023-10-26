@@ -4,10 +4,10 @@
 
 @layer base {
   html {
-    @apply text-[70%] sm:text-[75%];
+    @apply text-[70%] lg:text-[75%];
   }
 
   body {
-    @apply h-[100dvh] w-[100dvw]  bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-radial-from to-radial-to bg-no-repeat md:h-[768px] md:w-[1366px];
+    @apply h-[100dvh] w-[100dvw]  bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-radial-from to-radial-to bg-no-repeat lg:h-[768px] lg:w-[1366px];
   }
 }
