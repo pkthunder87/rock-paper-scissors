@@ -9,13 +9,14 @@ const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 function ChosenGestures() {
   const {
+    isDesktop,
+    setIsDesktop,
     setIsLoading,
     playerWon,
     setPlayerWon,
     setPlayerScore,
     showHousePick,
     setShowHousePick,
-    playerWonDelay,
     setPlayerWonDelay,
   } = useGameState();
 
@@ -26,6 +27,11 @@ function ChosenGestures() {
     () =>
       availableGestures[Math.floor(Math.random() * availableGestures.length)],
   );
+
+  useEffect(function () {
+    if (innerWidth >= 1200) setIsDesktop(true);
+    console.log(isDesktop);
+  });
 
   useEffect(
     function gameLogic() {
@@ -152,8 +158,10 @@ function ChosenGestures() {
 
   const bg_pos_house = houseGesture === 'spock' ? 'bg-[60%_50%]' : 'bg-center';
 
+  const the_house_picked_text = showHousePick ? 'mt-6' : 'mt-12';
+
   return (
-    <div className=" grid grid-cols-2 self-center md:grid-cols-[50%_50%]">
+    <div className=" grid grid-cols-2 self-center md:grid-cols-[50%_50%] lg:text-[2rem] ">
       <div className=" -mt-4 mr-4 justify-self-start md:grid">
         <div>
           <HandGesture
@@ -165,13 +173,17 @@ function ChosenGestures() {
             bg_image={`bg-[url('../icon-${playerGesture}.svg')]`}
             bg_scale={bg_scale_player}
             bg_pos={bg_pos_player}
+            // button_size_multiplier=" xl:h-[18rem] xl:w-[18rem]"
+            // image_size_multiplier=" xl:h-[12rem] xl:w-[12rem]"
+            image_size_multiplier={null}
+            button_size_multiplier={null}
           >
-            {showHousePick ? <WinnerTag /> : null}
+            {showHousePick ? <WinnerTag tagTextSize="lg:text-5xl" /> : null}
           </HandGesture>
         </div>
 
-        <p className=" mt-6  flex  justify-center text-xl tracking-wide text-white md:-order-1">
-          You Picked
+        <p className=" mt-6  flex  justify-center text-[1.25em] tracking-wide text-white md:-order-1">
+          YOU PICKED
         </p>
       </div>
 
@@ -187,15 +199,19 @@ function ChosenGestures() {
               bg_image={`bg-[url('../icon-${houseGesture}.svg')]`}
               bg_scale={bg_scale_house}
               bg_pos={bg_pos_house}
+              image_size_multiplier={null}
+              button_size_multiplier={null}
             >
-              <WinnerTag />
+              <WinnerTag tagTextSize="lg:text-5xl" />
             </HandGesture>
           </div>
         ) : (
           <Circle />
         )}
-        <p className=" mt-6  flex justify-center text-xl tracking-wide text-white  md:-order-1">
-          The House Picked
+        <p
+          className={` mt-12  flex justify-center text-[1.25em] tracking-wide text-white  md:-order-1 ${the_house_picked_text}`}
+        >
+          THE HOUSE PICKED
         </p>
       </div>
     </div>

@@ -9,7 +9,7 @@ function Results() {
   return (
     <div className="row-span-2 grid grid-rows-[58%_42%] ">
       <ChosenGestures />
-      {!isLoading && <PlayerWinLose />}
+      {/* {!isLoading && <PlayerWinLose />} */}
     </div>
   );
 }

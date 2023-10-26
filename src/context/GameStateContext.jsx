@@ -3,6 +3,8 @@ import { createContext, useContext, useState } from 'react';
 const GameStateContext = createContext();
 
 function GameStateProvider({ children }) {
+  const [isDesktop, setIsDesktop] = useState(false);
+
   const [showModal, setShowModal] = useState(false);
   const [playerScore, setPlayerScore] = useState(0);
 
@@ -20,6 +22,8 @@ function GameStateProvider({ children }) {
   return (
     <GameStateContext.Provider
       value={{
+        isDesktop,
+        setIsDesktop,
         showModal,
         setShowModal,
         playerScore,
