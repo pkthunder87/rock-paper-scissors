@@ -9,6 +9,7 @@ const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 function ChosenGestures() {
   const {
+    isLoading,
     isDesktop,
     setIsDesktop,
     setIsLoading,
@@ -162,9 +163,17 @@ function ChosenGestures() {
     ? 'mt-6 lg:mb-[5rem] lg:mt-[16px]'
     : 'mt-12 lg:mb-[5rem] lg:mt-[1.35rem] lg:mr-[3.3rem]';
 
+  const loading_finished_player = isLoading
+    ? ' -mt-4 justify-self-start lg:grid '
+    : ' mt-8  md:mr-72 justify-self-start lg:grid ';
+
+  const loading_finished_house = isLoading
+    ? ' -mt-4 justify-self-end lg:grid'
+    : ' mt-8  md:ml-48 justify-self-end lg:grid';
+
   return (
     <div className=" grid grid-cols-2 self-center lg:mt-10 lg:grid-cols-[50%_50%] lg:pl-6 lg:pr-6 lg:text-[2rem]">
-      <div className=" -mt-4 mr-4 justify-self-start lg:grid ">
+      <div className={loading_finished_player}>
         <div>
           <HandGesture
             winner={playerWon === 'win'}
@@ -189,7 +198,7 @@ function ChosenGestures() {
         </p>
       </div>
 
-      <div className=" -mt-4 mr-4 justify-self-end lg:grid">
+      <div className={loading_finished_house}>
         {showHousePick ? (
           <div>
             <HandGesture
