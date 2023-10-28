@@ -160,19 +160,19 @@ function ChosenGestures() {
   const bg_pos_house = houseGesture === 'spock' ? 'bg-[60%_50%]' : 'bg-center';
 
   const the_house_picked_text = showHousePick
-    ? 'mt-6 lg:mb-[5rem] lg:mt-[16px]'
-    : 'mt-12 lg:mb-[5rem] lg:mt-[1.35rem] lg:mr-[3.3rem]';
+    ? 'mt-6 md:-mt-6 lg:mt-6 md:mb-[0rem] md:mt-[16px] lg:mb-[5rem] lg:mt-[16px]'
+    : 'mt-12 md:-mt-6 lg:mt-12  md:mb-[0rem] md:mt-[1.35rem] md:mr-[3.3rem] lg:mb-[5rem] lg:mt-[1.35rem] lg:mr-[3.3rem]';
 
   const loading_finished_player = isLoading
-    ? ' -mt-4 justify-self-start lg:grid '
-    : ' mt-8  md:mr-72 justify-self-start lg:grid ';
+    ? ' -mt-4 justify-self-start md:grid '
+    : ' mt-8 lg:mr-72 md:mr-24 md:justify-self-end lg:justify-self-start md:grid ';
 
   const loading_finished_house = isLoading
-    ? ' -mt-4 justify-self-end lg:grid'
-    : ' mt-8  md:ml-48 justify-self-end lg:grid';
+    ? ' -mt-4 justify-self-end md:grid'
+    : ' mt-8  lg:ml-48 justify-self-end md:grid md:ml-0';
 
   return (
-    <div className=" grid grid-cols-2 self-center lg:mt-10 lg:grid-cols-[50%_50%] lg:pl-6 lg:pr-6 lg:text-[2rem]">
+    <div className=" grid grid-cols-2 self-center md:mt-0 md:grid-cols-[50%_50%] md:pl-0 md:pr-0 md:text-[1.9rem] lg:mt-10 lg:pl-6 lg:pr-6 lg:text-[2rem]">
       <div className={loading_finished_player}>
         <div>
           <HandGesture
@@ -189,11 +189,13 @@ function ChosenGestures() {
             image_size_multiplier={null}
             button_size_multiplier={null}
           >
-            {showHousePick ? <WinnerTag tagTextSize="lg:text-5xl" /> : null}
+            {showHousePick ? (
+              <WinnerTag tagTextSize="lg:text-5xl md:text-4xl" />
+            ) : null}
           </HandGesture>
         </div>
 
-        <p className=" mt-6  flex  justify-center text-[1.25em] tracking-widest text-white lg:-order-1 lg:mb-[5rem] lg:mt-[16px] lg:text-[1em]">
+        <p className=" mt-6  flex  justify-center text-[1.25em] tracking-widest text-white md:-order-1 md:mb-[5rem] md:mt-[16px] md:text-[.8em] lg:text-[1em]">
           YOU PICKED
         </p>
       </div>
@@ -213,14 +215,14 @@ function ChosenGestures() {
               image_size_multiplier={null}
               button_size_multiplier={null}
             >
-              <WinnerTag tagTextSize="lg:text-5xl" />
+              <WinnerTag tagTextSize="lg:text-5xl md:text-4xl" />
             </HandGesture>
           </div>
         ) : (
           <Circle />
         )}
         <p
-          className={` -ml-4 flex  text-[1.25em] tracking-widest text-white md:justify-center  lg:-order-1 lg:text-[1em] ${the_house_picked_text}`}
+          className={` -ml-4 flex  text-[1.25em] tracking-widest text-white md:-order-1  md:justify-center md:text-[.8em] lg:text-[1em] ${the_house_picked_text}`}
         >
           THE HOUSE PICKED
         </p>
