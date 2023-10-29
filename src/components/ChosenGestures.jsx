@@ -195,7 +195,7 @@ function ChosenGestures() {
           </HandGesture>
         </div>
 
-        <p className=" mt-6  flex  justify-center text-[1.25em] tracking-widest text-white md:-order-1 md:mb-[5rem] md:mt-[16px] md:text-[.8em] lg:text-[1em]">
+        <p className=" ml-4  mt-6  flex text-[1.25em] tracking-widest text-white md:-order-1 md:mb-[5rem] md:ml-0 md:mt-[16px] md:justify-center md:text-[.8em] lg:text-[1em]">
           YOU PICKED
         </p>
       </div>
