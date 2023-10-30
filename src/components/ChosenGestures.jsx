@@ -164,12 +164,12 @@ function ChosenGestures() {
     : 'mt-12 md:-mt-6 lg:mt-12  md:mb-[0rem] md:mt-[1.35rem] md:mr-[3.3rem] lg:mb-[5rem] lg:mt-[1.35rem] lg:mr-[3.3rem]';
 
   const loading_finished_player = isLoading
-    ? ' -mt-4 justify-self-start md:grid '
+    ? ' -mt-4 justify-self-start md:grid md:justify-self-end lg:justify-self-start'
     : ' mt-8 lg:mr-72 md:mr-24 md:justify-self-end lg:justify-self-start md:grid ';
 
   const loading_finished_house = isLoading
-    ? ' -mt-4 justify-self-end md:grid'
-    : ' mt-8  lg:ml-48 justify-self-end md:grid md:ml-0';
+    ? ' -mt-4 justify-self-end lg:justify-self-end md:justify-self-center md:grid md:mb-[-5.1rem] lg:mb-0'
+    : ' mt-8 lg:ml-48 justify-self-end lg:justify-self-end md:justify-self-center md:grid md:ml-0 md:mb-[-5.1rem] lg:mb-0';
 
   return (
     <div className=" grid grid-cols-2 self-center md:mt-0 md:grid-cols-[50%_50%] md:pl-0 md:pr-0 md:text-[1.9rem] lg:mt-10 lg:pl-6 lg:pr-6 lg:text-[2rem]">
