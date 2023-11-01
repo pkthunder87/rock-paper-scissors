@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useGameState } from '../context/gameStateContext';
+import { useGameState } from '../context/GameStateContext';
 
 function Modal() {
   const {

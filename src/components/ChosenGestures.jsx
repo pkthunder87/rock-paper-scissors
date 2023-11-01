@@ -3,7 +3,7 @@ import Circle from './Circle';
 import HandGesture from './HandGesture';
 import WinnerTag from './Winner';
 import { useParams } from 'react-router-dom';
-import { useGameState } from '../context/gameStateContext';
+import { useGameState } from '../context/GameStateContext';
 
 const availableGestures = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 

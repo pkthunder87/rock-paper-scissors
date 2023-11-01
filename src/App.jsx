@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { useGameState } from './context/gameStateContext';
+import { useGameState } from './context/GameStateContext.jsx';
 
 import Header from './components/Header';
 import Start from './pages/Start';

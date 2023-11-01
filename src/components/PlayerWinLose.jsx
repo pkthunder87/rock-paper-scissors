@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useGameState } from '../context/gameStateContext';
+import { useGameState } from '../context/GameStateContext';
 
 function PlayerWinLose() {
   const { playerWon: playerWin } = useGameState();

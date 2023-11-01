@@ -1,4 +1,4 @@
-import { useGameState } from '../context/gameStateContext';
+import { useGameState } from '../context/GameStateContext';
 
 import ChosenGestures from '../components/ChosenGestures';
 import PlayerWinLose from '../components/PlayerWinLose';

@@ -1,4 +1,4 @@
-import { useGameState } from '../context/gameStateContext';
+import { useGameState } from '../context/GameStateContext';
 
 function ScoreBox() {
   const { playerScore } = useGameState();
