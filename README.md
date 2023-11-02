@@ -11,14 +11,13 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 ### Links
 
-- Live Site URL: [Github Pages](ReplaceWithActualLiveUrl)
+- Live Site URL: [Github Pages](https://pkthunder-rpsls.netlify.app/)
 
 ### Built with
 
 - Vite
 - React
 - Tailwind CSS
-- Redux
 
 ## Author
 
