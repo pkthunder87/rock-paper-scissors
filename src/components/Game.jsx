@@ -5,9 +5,9 @@ function Game() {
     <>
       <div
         className=" row-span-1 mt-12 grid
-    grid-cols-[minmax(150px,190px)_minmax(150px,190px)] grid-rows-[33%_33%_33%] items-center justify-center bg-[url(../bg-pentagon.svg)] bg-[length:249px] bg-center  bg-no-repeat xl:mt-20 xl:grid-rows-[20%_50%_33%] xl:bg-[length:326px_300px]"
+    grid-cols-[minmax(150px,190px)_minmax(150px,190px)] grid-rows-[33%_33%_33%] items-center justify-center bg-[url(../bg-pentagon.svg)] bg-[length:249px] bg-center  bg-no-repeat xl:mt-20 xl:grid-rows-[20%_50%_33%] xl:bg-[length:380px_340px]"
       >
-        <div className="col-span-2 mt-14 justify-self-center xl:mt-28 ">
+        <div className="col-span-2 mt-14 justify-self-center xl:mt-52 ">
           <HandGesture
             gesture="scissors"
             bg_image="bg-[url('../icon-scissors.svg')]"
@@ -16,7 +16,7 @@ function Game() {
           />
         </div>
 
-        <div className="-mt-7 mr-24 justify-self-end xl:mr-[7.5rem]">
+        <div className="-mt-7 mr-24 justify-self-end xl:-mt-8 xl:mr-[7.5rem]">
           <HandGesture
             gesture="spock"
             bg_image="bg-[url('../icon-spock.svg')]"
@@ -27,7 +27,7 @@ function Game() {
           />
         </div>
 
-        <div className="-mt-7 ml-24 justify-self-start xl:ml-[7.5rem]">
+        <div className="-mt-7 ml-24 justify-self-start xl:-mt-8 xl:ml-[7.5rem]">
           <HandGesture
             gesture="paper"
             bg_image="bg-[url('../icon-paper.svg')]"
@@ -37,7 +37,7 @@ function Game() {
           />
         </div>
 
-        <div className=" mr-8 mt-3 justify-self-end xl:-mt-24">
+        <div className=" mr-8 mt-3 justify-self-end xl:-mt-56">
           <HandGesture
             gesture="lizard"
             bg_image="bg-[url('../icon-lizard.svg')]"
@@ -47,7 +47,7 @@ function Game() {
           />
         </div>
 
-        <div className="ml-8 mt-3 justify-self-start xl:-mt-24">
+        <div className="ml-8 mt-3 justify-self-start  xl:-mt-56">
           <HandGesture
             gesture="rock"
             bg_image="bg-[url('../icon-rock.svg')]"
